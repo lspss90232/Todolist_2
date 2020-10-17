@@ -1,0 +1,151 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script defer src="/Volumes/MAC專用/program/fontawesome-free-5.15.1-web/js/all.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="input_item">
+        <h2>Todo List</h2>
+        <div class="keyinblock">
+          <input class="additem" id="newTodo" type="text" placeholder="Add an item..." />
+          <div class="addBtn" id="addBtn"> </div>
+        </div><img class="spirit" src="https://i.imgur.com/KCJO3Lq.png" />
+      </div>
+    </header>
+    <div class="list_content">
+      <!-- Todo-->
+      <div class="todo" id="todo-list">
+        <div class="todo_title">Todo</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 76.63 81.23">
+          <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.42;
+              }
+
+              .cls-2,
+              .cls-3,
+              .cls-4,
+              .cls-5 {
+                fill: none;
+                stroke-miterlimit: 10;
+              }
+
+              .cls-2,
+              .cls-3 {
+                stroke: #e6e6e6;
+                stroke-width: 7px;
+              }
+
+              .cls-3,
+              .cls-5 {
+                stroke-linecap: round;
+              }
+
+              .cls-4,
+              .cls-5 {
+                stroke: #ccc;
+                stroke-width: 5px;
+              }
+            </style>
+          </defs>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <g class="cls-1">
+                <rect class="cls-2" x="8.81" y="14.62" width="57" height="58" rx="10"
+                  transform="translate(-12.51 15.11) rotate(-19.67)"></rect>
+                <line class="cls-3" x1="14.71" y1="36.83" x2="51.43" y2="23.7"></line>
+                <line class="cls-3" x1="18.62" y1="49.24" x2="55.34" y2="36.11"></line>
+                <line class="cls-3" x1="22.66" y1="60.54" x2="59.38" y2="47.41"></line>
+              </g>
+              <rect class="cls-4" x="11.81" y="7.62" width="57" height="58" rx="10"
+                transform="translate(-9.97 15.71) rotate(-19.67)"></rect>
+              <line class="cls-5" x1="17.71" y1="29.83" x2="54.43" y2="16.7"></line>
+              <line class="cls-5" x1="21.62" y1="42.24" x2="58.34" y2="29.11"></line>
+              <line class="cls-5" x1="25.66" y1="53.54" x2="62.38" y2="40.41"></line>
+            </g>
+          </g>
+        </svg>
+        <ol id="my-todo">
+          <!-- display todos here-->
+        </ol>
+      </div>
+      <!-- Done-->
+      <div class="done" id="done-list">
+        <div class="done_title">Done</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 65.05 63.99">
+          <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.7;
+              }
+
+              .cls-2,
+              .cls-3,
+              .cls-4 {
+                fill: none;
+              }
+
+              .cls-2 {
+                stroke: #e6e6e6;
+                stroke-width: 7px;
+              }
+
+              .cls-2,
+              .cls-3 {
+                stroke-miterlimit: 10;
+              }
+
+              .cls-3,
+              .cls-4 {
+                stroke: #ccc;
+              }
+
+              .cls-3 {
+                stroke-width: 5px;
+              }
+
+              .cls-4 {
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 6px;
+              }
+            </style>
+          </defs>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <g class="cls-1">
+                <circle class="cls-2" cx="30.38" cy="33.6" r="26.88"></circle>
+                <path class="cls-2" d="M18.15,37.75s10,8.81,14.46,9,9.58-25.63,9.58-25.63"></path>
+              </g>
+              <circle class="cls-3" cx="35.66" cy="29.38" r="26.88"></circle>
+              <path class="cls-4" d="M23.43,33.53s10,8.81,14.45,9,9.59-25.63,9.59-25.63"></path>
+            </g>
+          </g>
+        </svg>
+        <ol id="my-done"></ol>
+      </div>
+    </div>
+    <div class="circle">
+      <div class="main_circle"></div>
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+    </div>
+  </div>
+  <script src='main.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
